@@ -51,18 +51,12 @@ ENV HOME=/root \
     DISPLAY_HEIGHT=668 \
     RUN_XTERM=yes \
     RUN_UNITY=yes
-    VNCPASSWORD=yes
 
 RUN adduser ubuntu
 
 RUN echo "ubuntu:ubuntu" | chpasswd && \
     adduser ubuntu sudo && \
     sudo usermod -a -G sudo ubuntu
-
-RUN wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb && apt install ./teamviewer_amd64.deb
-
-RUN sudo add-apt-repository ppa:obsproject/obs-studio \
-     && sudo apt-get update && sudo apt-get install -y obs-studio
 
 COPY . /app
 
