@@ -16,4 +16,11 @@ case $RUN_XTERM in
     ;;
 esac
 
+x11vnc -storepasswd
+expect "Enter VNC password:"
+send "helloworld"
+expect "Verify password:"
+send "helloworld"
+
+
 exec supervisord -c /app/supervisord.conf
