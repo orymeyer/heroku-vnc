@@ -51,6 +51,9 @@ ENV HOME=/root \
     DISPLAY_HEIGHT=668 \
     RUN_XTERM=yes \
     RUN_UNITY=yes
+    VNC_PASSWORD=yes
+    VNCPASSWORD=yes
+    vncpassword=yes
 
 RUN adduser ubuntu
 
