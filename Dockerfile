@@ -51,8 +51,6 @@ ENV HOME=/root \
     DISPLAY_HEIGHT=668 \
     RUN_XTERM=yes \
     RUN_UNITY=yes
-    
-RUN x11vnc -storepasswd "mypassword" 
 
 RUN adduser ubuntu
 
