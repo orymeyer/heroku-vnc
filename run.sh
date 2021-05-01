@@ -16,6 +16,4 @@ case $RUN_XTERM in
     ;;
 esac
 
-x11vnc -storepasswd "mypassword" 
-
 exec supervisord -c /app/supervisord.conf
